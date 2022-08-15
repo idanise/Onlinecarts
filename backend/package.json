@@ -1,0 +1,35 @@
+{
+  "name": "onlinecart",
+  "version": "1.0.0",
+  "description": "An online store for portfolio",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Danise",
+  "license": "ISC",
+  "dependencies": {
+    "@sendgrid/mail": "^7.7.0",
+    "body-parser": "^1.20.0",
+    "braintree": "^3.11.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-jwt": "^7.7.5",
+    "express-validator": "^5.3.1",
+    "formidable": "^2.0.1",
+    "fs": "^0.0.1-security",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.4.1",
+    "morgan": "^1.10.0",
+    "nodemailer": "^6.7.7",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "nodemon": "^2.0.18",
+    "path": "^0.12.7",
+    "uuid": "^8.3.2"
+  }
+}
