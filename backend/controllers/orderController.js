@@ -30,23 +30,32 @@ const create = (req, res) => {
     }
 
     //send mail
+    // const transporter = nodemailer.createTransport({
+    //   host: process.env.EMAIL_HOST,
+    //   port: process.env.EMAIL_PORT,
+    //   secure: true, // true for 465, false for other ports
+    //   tls: {
+    //     rejectUnauthorized: false
+    //   },
+    //   auth: {
+    //     user: process.env.EMAIL_USERNAME, // generated ethereal user
+    //     pass: process.env.EMAIL_PASSWORD // generated ethereal password
+    //   }
+    // })
+
     const transporter = nodemailer.createTransport({
-      host: process.env.EMAIL_HOST,
-      port: process.env.EMAIL_PORT,
-      secure: true, // true for 465, false for other ports
-      tls: {
-        rejectUnauthorized: false
-      },
+      host: 'smtp.mailtrap.io',
+      port: 2525,
       auth: {
-        user: process.env.EMAIL_USERNAME, // generated ethereal user
-        pass: process.env.EMAIL_PASSWORD // generated ethereal password
+        user: 'dd917e9d437913',
+        pass: '5c0eebcd91a161'
       }
     })
 
     const mailOptions = {
-      from: 'Producemart@support.com',
+      from: `${process.env.MAIL_FROM}`,
       // to: `${order.user.email}`,
-      to: 'test23@mailinator.com',
+      to: 'daniseiheme@gmail.com',
       subject: 'A new order is received',
       html: `
       <h1>Hey Admin, Somebody just made a purchase in your ecommerce store</h1>
